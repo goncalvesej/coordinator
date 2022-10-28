@@ -1,0 +1,54 @@
+disabled_rules:
+  # - colon
+  # - comma
+  # - control_statement
+
+opt_in_rules:
+  # - empty_count 
+  - explicit_acl
+  - explicit_top_level_acl
+  - lower_acl_than_parent
+
+included:
+  - Sources
+  - Tests
+
+# excluded:
+analyzer_rules:
+  - explicit_self
+
+
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+
+line_length: 150
+
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
+file_length:
+  warning: 500
+  error: 1200
+
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+  allowed_symbols: ["_"]
+identifier_name:
+  min_length: 
+    error: 3 
+  excluded: 
+    - id
+    - URL
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
+
+explicit_acl: error
+explicit_top_level_acl: error
+lower_acl_than_parent: error
