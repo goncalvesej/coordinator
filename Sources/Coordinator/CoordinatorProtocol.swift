@@ -8,11 +8,7 @@
 
 import UIKit
 
-internal protocol CoordinatorEvent {
-
-}
-
-internal protocol CoordinatorProtocol {
+public protocol CoordinatorProtocol {
 
     var uuid: String { get }
     var parentCoordinator: CoordinatorProtocol? { get set }
@@ -28,11 +24,11 @@ internal protocol CoordinatorProtocol {
 
 extension CoordinatorProtocol {
 
-    internal mutating func appendChild(_ coordinator: CoordinatorProtocol) {
+    public mutating func appendChild(_ coordinator: CoordinatorProtocol) {
         children.append(coordinator)
     }
 
-    internal mutating func removeChild(_ coordinator: CoordinatorProtocol) {
+    public mutating func removeChild(_ coordinator: CoordinatorProtocol) {
         children.removeAll(where: { coo in
             coo.uuid == coordinator.uuid
         })
