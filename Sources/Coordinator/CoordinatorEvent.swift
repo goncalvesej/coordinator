@@ -11,4 +11,3 @@ import Foundation
 public protocol CoordinatorEvent {
 
 }
-
