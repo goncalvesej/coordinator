@@ -3,7 +3,7 @@
 //  Coordinator
 //
 //  Created by Eraldo Jr. on 27/10/22.
-//  Copyright © 2022 goncalvesej. All rights reserved.
+//
 //
 
 import UIKit
@@ -15,7 +15,6 @@ public protocol CoordinatorProtocol {
     var children: [CoordinatorProtocol] { get set }
     var navigationController: UINavigationController { get set }
 
-    func start()
     func handle(_ event: CoordinatorEvent)
     mutating func appendChild(_ coordinator: CoordinatorProtocol)
     mutating func removeChild(_ coordinator: CoordinatorProtocol)
