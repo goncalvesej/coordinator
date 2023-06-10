@@ -1,3 +1,3 @@
-# Coordinator
+# A simple Coordinator
 
-A description of this package.
+Check out @ https://github.com/goncalvesej/adummyproject
